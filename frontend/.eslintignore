@@ -1,0 +1,7 @@
+*.md
+next.config.js
+scripts/
+**/node_modules
+mock/*
+src/stories
+src/graphql/generated
