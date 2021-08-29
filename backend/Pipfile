@@ -1,0 +1,36 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[scripts]
+init = "pipenv install"
+init_dev = "pipenv install --dev"
+server = "python manage.py runserver 0.0.0.0:3001 --settings=config.settings.local"
+make_migration = "python manage.py makemigrations"
+migrate = "python manage.py migrate"
+create_user = "python manage.py createsuperuser"
+test = "pytest app/tests"
+lint = "flake8 --ignore=W503,F401,F403 --exclude=.venv,*_cache,__pycache__,**/migrations ."
+security_lint = "bandit --exclude ./.venv,./app/tests --recursive ."
+type_lint = "mypy app"
+
+[packages]
+django = "==3.2.6"
+django-cors-headers = "==3.8.0"
+django-graphql-playground = "==1.0"
+graphene-django = "==2.15.0"
+
+[dev-packages]
+black = "==21.7b0"
+pytest = "==6.2.4"
+flake8 = "==3.9.2"
+isort = "==5.9.3"
+mypy = "==0.910"
+bandit = "==1.7.0"
+
+[pipenv]
+allow_prereleases = true
+
+[requires]
+python_version = "3.9.6"
