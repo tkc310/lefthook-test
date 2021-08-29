@@ -10,11 +10,9 @@ server = "python manage.py runserver 0.0.0.0:3001 --settings=config.settings.loc
 make_migration = "python manage.py makemigrations"
 migrate = "python manage.py migrate"
 create_user = "python manage.py createsuperuser"
-test = "pytest app/tests.py"
-lint = "flake8 --ignore=W503,F401,F403 --exclude=.venv,*_cache,__pycache__,**/migrations ."
-security_lint = "bandit --exclude ./.venv,./app/tests --recursive ."
-type_lint = "mypy app"
-tox_ = "tox -e py39 app"
+test = "tox4 -e py39"
+lint = "tox4 -e lint"
+strict_lint = "tox4 -e strictlint"
 
 [packages]
 django = "==3.2.6"
