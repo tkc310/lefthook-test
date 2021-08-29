@@ -20,7 +20,6 @@ export const PostPresentational: FC<Props> = ({ data }) => {
       <h1>Post Detail</h1>
       <h2>{post.title}</h2>
       <p>{post.content}</p>
-      <p>{post.fuga}</p>
     </>
   ) : (
     <p>Postが存在しません</p>
