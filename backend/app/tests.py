@@ -1,7 +1,7 @@
 from .models import *  # noqa: F403 F401
 
 
-def square(a: int, b: int) -> int:
+def square(a: int, b: int) -> str:
     return a * b
 
 
