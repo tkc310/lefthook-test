@@ -1,0 +1,46 @@
+{
+  "editor.formatOnSave": true,
+  "editor.rulers": [80],
+  "files.insertFinalNewline": true,
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false
+  },
+
+  // frontend
+  "eslint.packageManager": "npm",
+  "eslint.workingDirectories": [{ "mode": "auto" }],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+  },
+
+  // backend
+  "[python]": {
+    "editor.defaultFormatter": null
+  },
+  "files.watcherExclude": {
+    "**/venv/**": true
+  },
+  "python.pythonPath": "backend/.venv/bin/python",
+  "python.formatting.blackPath": "backend/.venv/bin/black",
+  "python.formatting.provider": "black",
+  "python.languageServer": "Pylance",
+  "python.linting.lintOnSave": true,
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": false,
+  "python.linting.flake8Enabled": true,
+  "python.linting.flake8Args": ["--max-line-length 80"],
+  "python.linting.mypyEnabled": true,
+  "python.linting.banditEnabled": true,
+  "python.analysis.completeFunctionParens": true,
+  "python.analysis.logLevel": "Warning",
+  "python.analysis.memory.keepLibraryAst": true,
+  "python.autoComplete.addBrackets": true,
+  "python.terminal.activateEnvInCurrentTerminal": true,
+  "python.testing.pytestEnabled": true,
+  "python.testing.unittestEnabled": false,
+  "python.testing.nosetestsEnabled": false,
+  "python.testing.pytestArgs": ["backend"],
+  "pylance.insidersChannel": "daily"
+}

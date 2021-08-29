@@ -1,0 +1,23 @@
+// Created https://migi.me/vsc_snippet/
+{
+  "fc": {
+    "prefix": "fc",
+    "body": [
+      "import { FC } from 'react';",
+      "",
+      "type Props = {};",
+      "",
+      "const defaultProps = {};",
+      "",
+      "export const $1: FC<Props> = ({}) => {",
+      "  return ();",
+      "};",
+      "",
+      "$1.defaultProps = defaultProps;",
+      "",
+      "export default $1;",
+      ""
+    ],
+    "description": "functional component"
+  }
+}
