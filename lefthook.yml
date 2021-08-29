@@ -1,0 +1,32 @@
+# EXAMPLE USAGE
+# Refer for explanation to following link:
+# https://github.com/evilmartians/lefthook/blob/master/docs/full_guide.md
+
+pre-commit:
+  parallel: true
+  commands:
+    frontend:
+      tags: frontend
+      root: 'frontend'
+      glob: '*.{js,ts,tsx,json}'
+      run: npx lint-staged
+    backend-isort:
+      tags: backend
+      root: 'backend'
+      glob: '*.{py}'
+      run: .tox/4/lint/bin/isort --check-only .
+    backend-black:
+      tags: backend
+      root: 'backend'
+      glob: '*.{py}'
+      run: .tox/4/lint/bin/black --check .
+    backend-flake8:
+      tags: backend
+      root: 'backend'
+      glob: '*.{py}'
+      run: .tox/4/lint/bin/flake8 .
+    backend-mypy:
+      tags: backend
+      root: 'backend'
+      glob: '*.{py}'
+      run: .tox/4/lint/bin/mypy .
