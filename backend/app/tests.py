@@ -1,3 +1,9 @@
-from django.test import TestCase
+from .models import *  # noqa: F403 F401
 
-# Create your tests here.
+
+def square(a: int, b: int) -> int:
+    return a * b
+
+
+def test_case():
+    assert square(2, 3) == 6
